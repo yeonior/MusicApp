@@ -127,10 +127,10 @@
 		A234B44728512315006F444B /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A234B443285122C9006F444B /* TabBarViewController.swift */,
 				A2461C2C284FC8C700CE27D8 /* HomeViewController.swift */,
 				A234B44128512298006F444B /* SearchViewController.swift */,
 				A234B445285122FE006F444B /* LibraryViewController.swift */,
-				A234B443285122C9006F444B /* TabBarViewController.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
