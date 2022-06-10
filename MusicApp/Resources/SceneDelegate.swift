@@ -21,7 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         } else {
             let navigationController = UINavigationController(rootViewController: WelcomeViewController())
             navigationController.navigationBar.prefersLargeTitles = true
-            navigationController.navigationItem.largeTitleDisplayMode = .always
+            navigationController.viewControllers.first?.navigationItem.largeTitleDisplayMode = .always
             window?.rootViewController = navigationController
         }
         
