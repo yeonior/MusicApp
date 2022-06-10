@@ -9,9 +9,47 @@ import UIKit
 
 final class WelcomeViewController: UIViewController {
     
+    // MARK: - Subviews
+    private let signInButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .white
+        button.setTitle("Sign in with Spotify", for: .normal)
+        button.setTitleColor(.black, for: .normal)
+        button.layer.cornerRadius = 10
+        return button
+    }()
+    
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureViews()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        configureSignInButtonFrame()
+    }
+    
+    // MARK: - Methods
+    private func configureViews() {
         title = "Welcome"
         view.backgroundColor = .systemGreen
+        
+        view.addSubview(signInButton)
+        signInButton.addTarget(self, action: #selector(didTapSignIn), for: .touchUpInside)
+    }
+    
+    private func configureSignInButtonFrame() {
+        signInButton.frame = CGRect(x: 20,
+                                    y: view.height - 50 - view.safeAreaInsets.bottom,
+                                    width: view.width - 40,
+                                    height: 50)
+    }
+    
+    @objc
+    private func didTapSignIn() {
+        let vc = AuthViewController()
+        vc.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
