@@ -29,6 +29,7 @@
 		A2461C2D284FC8C700CE27D8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2461C2C284FC8C700CE27D8 /* HomeViewController.swift */; };
 		A2461C32284FC8C900CE27D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2461C31284FC8C900CE27D8 /* Assets.xcassets */; };
 		A2461C35284FC8C900CE27D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A2461C33284FC8C900CE27D8 /* LaunchScreen.storyboard */; };
+		A2C600F42853BFAE006B8E62 /* UIView + extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2C600F32853BFAE006B8E62 /* UIView + extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		A2461C31284FC8C900CE27D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A2461C34284FC8C900CE27D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A2461C36284FC8C900CE27D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A2C600F32853BFAE006B8E62 /* UIView + extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				A2461C28284FC8C700CE27D8 /* AppDelegate.swift */,
 				A2461C2A284FC8C700CE27D8 /* SceneDelegate.swift */,
 				A2461C31284FC8C900CE27D8 /* Assets.xcassets */,
+				A2C600F32853BFAE006B8E62 /* UIView + extension.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				A234B44228512298006F444B /* SearchViewController.swift in Sources */,
 				A234B4602851252E006F444B /* AudioTrack.swift in Sources */,
 				A234B44A2851235A006F444B /* AuthViewController.swift in Sources */,
+				A2C600F42853BFAE006B8E62 /* UIView + extension.swift in Sources */,
 				A234B444285122C9006F444B /* TabBarViewController.swift in Sources */,
 				A234B46428512543006F444B /* UserProfile.swift in Sources */,
 				A234B446285122FE006F444B /* LibraryViewController.swift in Sources */,
