@@ -49,7 +49,16 @@ final class WelcomeViewController: UIViewController {
     @objc
     private func didTapSignIn() {
         let vc = AuthViewController()
+        vc.completionHandler = { [weak self] success in
+            DispatchQueue.main.async {
+                self?.handleSignIn(success: success)
+            }
+        }
         vc.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func handleSignIn(success: Bool) {
+        // log user in or yell at them for error
     }
 }

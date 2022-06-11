@@ -10,6 +10,9 @@ import WebKit
 
 final class AuthViewController: UIViewController {
     
+    // MARK: - Properties
+    public var completionHandler: ((Bool) -> Void)?
+    
     // MARK: - Subviews
     private let webView: WKWebView = {
         let preferences = WKWebpagePreferences()
@@ -19,7 +22,6 @@ final class AuthViewController: UIViewController {
         let webView = WKWebView(frame: .zero, configuration: configuration)
         return webView
     }()
-    
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
