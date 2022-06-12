@@ -21,7 +21,7 @@ final class AuthManager {
         let scope = "user-read-private"
         let redirectURI = ""
         let baseURL = "https://accounts.spotify.com/authorize"
-        let string = "\(baseURL)?response_type=code&client_id=\(Constants.clientID)&scope\(scope)=foo&redirect_uri=\(redirectURI)"
+        let string = "\(baseURL)?response_type=code&client_id=\(Constants.clientID)&scope\(scope)=foo&redirect_uri=\(redirectURI)&show_dialog=TRUE"
         return URL(string: string)
     }
     
@@ -47,4 +47,17 @@ final class AuthManager {
     
     // MARK: - Init
     private init() {}
+    
+    // MARK: - Methods
+    public func exchangeCodeForToken(code: String, completion: @escaping (Bool) -> Void) {
+        
+    }
+    
+    public func refreshAccessToken() {
+        
+    }
+    
+    private func cacheToken() {
+        
+    }
 }
