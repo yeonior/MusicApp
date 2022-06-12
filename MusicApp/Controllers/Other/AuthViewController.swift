@@ -27,6 +27,7 @@ final class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureViews()
+        webViewLoad()
     }
     
     override func viewDidLayoutSubviews() {
@@ -46,9 +47,20 @@ final class AuthViewController: UIViewController {
     private func configureWebViewFrame() {
         webView.frame = view.bounds
     }
+    
+    private func webViewLoad() {
+        guard let url = AuthManager.shared.signInURL else { return }
+        webView.load(URLRequest(url: url))
+    }
 }
 
 // MARK: - WKNavigationDelegate
 extension AuthViewController: WKNavigationDelegate {
-    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        guard let url = webView.url else { return }
+        // exchange the code for access token
+        let component = URLComponents(string: url.absoluteString)
+        guard let code = component?.queryItems?.first(where: { $0.name == "code" })?.value else { return }
+        print(code)
+    }
 }
